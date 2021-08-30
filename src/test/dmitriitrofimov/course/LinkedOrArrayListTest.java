@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import java.util.*;
 
+@SuppressWarnings("all")
 public class LinkedOrArrayListTest {
 
 	static List<String> arrayList;
@@ -21,7 +22,7 @@ public class LinkedOrArrayListTest {
 		}
 		System.out.println("Done.");
 
-		linkedList = new LinkedList(arrayList);
+		linkedList = new LinkedList<>(arrayList);
 	}
 
 	@Test(timeout = 3)
