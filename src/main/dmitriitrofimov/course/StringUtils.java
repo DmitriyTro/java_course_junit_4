@@ -3,7 +3,7 @@ package dmitriitrofimov.course;
 public class StringUtils {
 
 	// "  **" ---> "**", " **" ---> "**", "***" ---> "***", "**  " ---> "**  "
-	public static String chopOff2StarsAtHead(String str) {
+	public String chopOff2SpacesAtHead(String str) {
 		if (str.length() <= 2) {
 			return str.replaceAll(" ", "");
 		}
@@ -13,7 +13,8 @@ public class StringUtils {
 		return head.replaceAll(" ", "") + tail;
 	}
 
-	public static boolean are2CharsAtHeadAndTailEquals(String str) {
+	// "1234" ---> false, "1212" ---> true, "12" ---> true, "1" ---> false
+	public boolean are2CharsAtHeadAndTailEquals(String str) {
 		if (str.length() <= 1) {
 			return false;
 		}
